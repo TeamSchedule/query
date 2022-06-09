@@ -8,6 +8,6 @@ import (
 func setRoutes(router *gin.Engine) {
 	v1 := router.Group("v1")
 	{
-		v1.GET("/", handlers.Test)
+		v1.GET("/team/:teamId", handlers.GetTeamById)
 	}
 }
